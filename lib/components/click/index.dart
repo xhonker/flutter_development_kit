@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Click extends StatelessWidget {
-  const Click({Key? key, this.onTap, required this.child}) : super(key: key);
-  final Function()? onTap;
+  const Click({Key key, this.onTap, @required this.child}) : super(key: key);
+  final Function() onTap;
   final Widget child;
 
   @override

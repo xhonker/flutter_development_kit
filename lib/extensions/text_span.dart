@@ -6,11 +6,11 @@ extension TextSpanExtension on TextSpan {
     return this.copyWith(style: style);
   }
 
-  TextSpan click(Function()? _onTap) {
+  TextSpan click(Function() _onTap) {
     return this.copyWith(onTap: _onTap);
   }
 
-  TextSpan copyWith({TextStyle? style, Function()? onTap}) {
+  TextSpan copyWith({TextStyle style, Function() onTap}) {
     return TextSpan(
       text: this.text,
       style: style ?? this.style,

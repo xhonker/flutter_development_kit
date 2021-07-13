@@ -9,7 +9,7 @@ extension TextExtension on Text {
     return this.copyWith(style: style);
   }
 
-  Text copyWith({TextStyle? style, int? maxLines, TextOverflow? overflow}) {
+  Text copyWith({TextStyle style, int maxLines, TextOverflow overflow}) {
     return Text(
       this.data ?? '',
       style: style ?? this.style,

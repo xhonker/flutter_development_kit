@@ -4,13 +4,13 @@ import 'package:flutter_development_kit/flutter_development_kit.dart';
 extension ContainerExtension on Container {
   /// padding
   Container padding2({
-    double? all,
-    double? top,
-    double? bottom,
-    double? left,
-    double? right,
-    double? horizontal,
-    double? vertical,
+    double all,
+    double top,
+    double bottom,
+    double left,
+    double right,
+    double horizontal,
+    double vertical,
   }) {
     return this.copyWith(
       padding: EdgeInsets.only(
@@ -24,13 +24,13 @@ extension ContainerExtension on Container {
 
   /// margin
   Container margin2({
-    double? all,
-    double? top,
-    double? bottom,
-    double? left,
-    double? right,
-    double? horizontal,
-    double? vertical,
+    double all,
+    double top,
+    double bottom,
+    double left,
+    double right,
+    double horizontal,
+    double vertical,
   }) {
     return this.copyWith(
       margin: EdgeInsets.only(
@@ -49,13 +49,13 @@ extension ContainerExtension on Container {
 
   /// border radius
   Container borderRadius({
-    double? all,
-    double? topLeft,
-    double? topRight,
-    double? bottomLeft,
-    double? bottomRight,
+    double all,
+    double topLeft,
+    double topRight,
+    double bottomLeft,
+    double bottomRight,
   }) {
-    Radius radius(double? r) => Radius.circular(adaptDefalut(r ?? all));
+    Radius radius(double r) => Radius.circular(adaptDefalut(r ?? all));
 
     return this.copyWith(
       decoration: ((this.decoration ?? BoxDecoration()) as BoxDecoration).copyWith(
@@ -71,15 +71,15 @@ extension ContainerExtension on Container {
 
   /// border
   Container border({
-    required Color color,
+    @required Color color,
     BorderStyle style = BorderStyle.solid,
-    double? all,
-    double? top,
-    double? bottom,
-    double? left,
-    double? right,
+    double all,
+    double top,
+    double bottom,
+    double left,
+    double right,
   }) {
-    BorderSide borderSide({required Color color, required BorderStyle style, double? width}) {
+    BorderSide borderSide({@required Color color, @required BorderStyle style, double width}) {
       return BorderSide(
         width: width ?? all ?? 0.0,
         color: (width != null || all != null) ? color : Colors.transparent,
@@ -100,10 +100,10 @@ extension ContainerExtension on Container {
   }
 
   Container gradient({
-    required List<Color> colors,
+    @required List<Color> colors,
     AlignmentGeometry begin = Alignment.centerLeft,
     AlignmentGeometry end = Alignment.centerRight,
-    List<double>? stops,
+    List<double> stops,
   }) {
     return this.copyWith(
       decoration: ((this.decoration ?? BoxDecoration()) as BoxDecoration).copyWith(
@@ -128,13 +128,13 @@ extension ContainerExtension on Container {
     );
   }
 
-  Container width(double? width) => this.copyWith(width: width != null ? Adapt.px(width) : width);
+  Container width(double width) => this.copyWith(width: width != null ? Adapt.px(width) : width);
 
-  Container height(double? height) => this.copyWith(height: height != null ? Adapt.px(height) : height);
+  Container height(double height) => this.copyWith(height: height != null ? Adapt.px(height) : height);
 
   Container clip(Clip clip) => this.copyWith(clipBehavior: clip);
 
-  Container alignment2(Alignment? alignment) => this.copyWith(alignment: alignment);
+  Container alignment2(Alignment alignment) => this.copyWith(alignment: alignment);
 
   Container maxWidth(double maxWidth) => this.copyWith(maxWidth: Adapt.px(maxWidth));
   Container minWidth(double minWidth) => this.copyWith(minWidth: Adapt.px(minWidth));
@@ -142,19 +142,19 @@ extension ContainerExtension on Container {
   Container minHeight(double minHeight) => this.copyWith(minHeight: Adapt.px(minHeight));
 
   Container copyWith({
-    EdgeInsets? padding,
-    EdgeInsets? margin,
-    AlignmentGeometry? alignment,
-    Clip? clipBehavior,
-    BoxDecoration? decoration,
-    BoxConstraints? boxConstraints,
+    EdgeInsets padding,
+    EdgeInsets margin,
+    AlignmentGeometry alignment,
+    Clip clipBehavior,
+    BoxDecoration decoration,
+    BoxConstraints boxConstraints,
     bool expanded = false,
-    double? width,
-    double? height,
-    double? maxWidth,
-    double? minWidth,
-    double? maxHeight,
-    double? minHeight,
+    double width,
+    double height,
+    double maxWidth,
+    double minWidth,
+    double maxHeight,
+    double minHeight,
   }) {
     BoxConstraints defaultConstraints = BoxConstraints(
       maxHeight: maxHeight ?? double.infinity,
@@ -163,7 +163,7 @@ extension ContainerExtension on Container {
       minHeight: minHeight ?? 0.0,
     );
     bool hasConstraint = (maxHeight != null || maxWidth != null || minHeight != null || minWidth != null);
-    BoxConstraints? constraints = hasConstraint ? defaultConstraints : this.constraints;
+    BoxConstraints constraints = hasConstraint ? defaultConstraints : this.constraints;
     return Container(
       padding: padding ?? this.padding,
       margin: margin ?? this.margin ?? EdgeInsets.zero,

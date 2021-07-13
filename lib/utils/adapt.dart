@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class Adapt {
   static int _designWidth = 375;
-  static late MediaQueryData mediaQuery;
-  static late double _width;
-  static late double _height;
-  static late double _rpx;
-  static late double _pixeRatio;
-  static late EdgeInsets _padding;
+  static MediaQueryData mediaQuery;
+  static double _width;
+  static double _height;
+  static double _rpx;
+  static double _pixeRatio;
+  static EdgeInsets _padding;
 
   static init(BuildContext _, {int designWidth = 375}) {
     _designWidth = designWidth;
@@ -38,10 +38,10 @@ class Adapt {
   static EdgeInsets get padding => _padding;
 }
 
-double? adapt(double? v) {
+double adapt(double v) {
   return v != null ? Adapt.px(v) : v;
 }
 
-double adaptDefalut(double? v, {double defalutValue = 0.0}) {
+double adaptDefalut(double v, {double defalutValue = 0.0}) {
   return v != null ? Adapt.px(v) : defalutValue;
 }

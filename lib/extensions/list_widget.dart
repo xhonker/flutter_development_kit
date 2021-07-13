@@ -29,7 +29,7 @@ extension ListWidgetExtension on List<Widget> {
     WrapAlignment alignment = WrapAlignment.start,
     WrapCrossAlignment crossAxisAlignment = WrapCrossAlignment.start,
     VerticalDirection verticalDirection = VerticalDirection.down,
-    TextDirection? textDirection,
+    TextDirection textDirection,
     Clip clipBehavior = Clip.none,
     double spacing = 0.0,
     double runSpacing = 0.0,

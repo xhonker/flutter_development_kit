@@ -3,13 +3,13 @@ import 'package:flutter_development_kit/flutter_development_kit.dart';
 
 extension WidgetExtension on Widget {
   Padding padding({
-    double? all,
-    double? top,
-    double? bottom,
-    double? left,
-    double? right,
-    double? horizontal,
-    double? vertical,
+    double all,
+    double top,
+    double bottom,
+    double left,
+    double right,
+    double horizontal,
+    double vertical,
   }) {
     return Padding(
       padding: EdgeInsets.only(
@@ -24,13 +24,13 @@ extension WidgetExtension on Widget {
 
   ClipOval clipOval() => ClipOval(child: this);
 
-  Click click({Function()? onTap}) => Click(onTap: onTap, child: this);
+  Click click({Function() onTap}) => Click(onTap: onTap, child: this);
 
   Align align([Alignment alignment = Alignment.center]) => Align(alignment: alignment, child: this);
 
   Visibility visibility([bool visible = true]) => Visibility(visible: visible, child: this);
 
-  Positioned positioned({double? top, double? bottom, double? left, double? right}) =>
+  Positioned positioned({double top, double bottom, double left, double right}) =>
       Positioned(top: adapt(top), bottom: adapt(bottom), left: adapt(left), right: adapt(right), child: this);
 
   Expanded expanded([int flex = 1]) => Expanded(flex: flex, child: this);
@@ -41,11 +41,10 @@ extension WidgetExtension on Widget {
 
   Container backgroundColor(Color color) => Container(color: color, child: this);
 
-  SizedBox sizedBox({double? height, double? width}) =>
-      SizedBox(height: adapt(height), width: adapt(width), child: this);
+  SizedBox sizedBox({double height, double width}) => SizedBox(height: adapt(height), width: adapt(width), child: this);
 
   /// 仅限于滚动容器使用
-  ScrollConfiguration overScroll({ScrollBehavior? behavior}) {
+  ScrollConfiguration overScroll({ScrollBehavior behavior}) {
     return ScrollConfiguration(behavior: behavior ?? OverScrollBehavior(), child: this);
   }
 
