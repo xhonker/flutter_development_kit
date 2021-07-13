@@ -26,4 +26,4 @@ dependencies:
       ref: feature/v1
 ```
 
-#### [DOC](./docs)
+#### [文档地址](./docs)
