@@ -6,8 +6,6 @@
 
 - [Text](./text.md)
 
-- [Click](./click.md)
-
 - [TextSpan](./textSpan.md)
 
 - [Widgets](./widgets)
