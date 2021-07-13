@@ -10,6 +10,8 @@
 
 - [TextSpan](./textSpan.md)
 
+- [Widgets](./widgets)
+
 #### Utils
 
 - [Adapt](./adapt.md)
