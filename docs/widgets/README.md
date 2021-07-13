@@ -7,3 +7,5 @@
 - [Click](./click.md)
 
 - [Align](./align.md)
+
+- [Visibility](./visibility.md)
