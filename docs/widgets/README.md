@@ -5,3 +5,5 @@
 - [Padding](./padding.md)
 
 - [Click](./click.md)
+
+- [Align](./align.md)
