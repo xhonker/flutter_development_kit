@@ -9,6 +9,22 @@ extension TextExtension on Text {
     return this.copyWith(style: style);
   }
 
+  Text fontSize(double fontSize) {
+    return this.copyWith(style: (this.style ?? TextStyle()).copyWith(fontSize: fontSize));
+  }
+
+  Text bold([FontWeight fontWeight = FontWeight.bold]) {
+    return this.copyWith(style: (this.style ?? TextStyle()).copyWith(fontWeight: fontWeight));
+  }
+
+  Text color(Color color) {
+    return this.copyWith(style: (this.style ?? TextStyle()).copyWith(color: color));
+  }
+
+  Text lineHeight(double height) {
+    return this.copyWith(style: (this.style ?? TextStyle()).copyWith(height: height));
+  }
+
   Text copyWith({TextStyle? style, int? maxLines, TextOverflow? overflow}) {
     return Text(
       this.data ?? '',
