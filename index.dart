@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import './lib/flutter_development_kit.dart';
 
@@ -7,19 +6,12 @@ class Example extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return RichText(
-    //   text: TextSpan(children: [
-    //     TextSpan(text: '12', recognizer: TapGestureRecognizer()..onTap = () {}),
-    //   ]),
-    // );
-
-    return RichText(
-      text: TextSpan(
-        children: [
-          TextSpan(text: '12').click(() => null).style2(
-                TextStyle(fontSize: 12),
-              )
-        ],
+    return Container().width(100).height(100).backgroundColor(Colors.red).clipOval();
+    return ClipOval(
+      child: Container(
+        width: 100,
+        height: 100,
+        color: Colors.red,
       ),
     );
   }
