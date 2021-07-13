@@ -12,4 +12,4 @@
 
 #### Utils
 
-- [Adapt](./adapt.md)
+- [All](./Utils)
