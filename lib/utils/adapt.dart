@@ -6,7 +6,7 @@ class Adapt {
   static late double _width;
   static late double _height;
   static late double _rpx;
-  static late double _pixeRatio;
+  static late double _pixelRatio;
   static late EdgeInsets _padding;
 
   static init(BuildContext _, {int designWidth = 375}) {
@@ -14,7 +14,7 @@ class Adapt {
     mediaQuery = MediaQuery.of(_);
     _width = mediaQuery.size.width;
     _height = mediaQuery.size.height;
-    _pixeRatio = mediaQuery.devicePixelRatio;
+    _pixelRatio = mediaQuery.devicePixelRatio;
     _padding = mediaQuery.padding;
     initRpx();
   }
@@ -32,7 +32,7 @@ class Adapt {
   }
 
   // one px
-  static double get one => 1 / _pixeRatio;
+  static double get one => 1 / _pixelRatio;
   static double get w => _width;
   static double get h => _height;
   static EdgeInsets get padding => _padding;
