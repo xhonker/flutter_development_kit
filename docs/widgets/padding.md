@@ -1,5 +1,17 @@
 ### Padding
 
+参数说明
+
+| 参数         | 说明 | 类型     | 默认值 | 示例                     |
+| ------------ | ---- | -------- | ------ | ------------------------ |
+| `all`        | 全部 | `double` | `-`    | `padding(all:10)`        |
+| `top`        | 上   | `double` | `-`    | `padding(top:10)`        |
+| `bottom`     | 下   | `double` | `-`    | `padding(bottom:10)`     |
+| `left`       | 左   | `double` | `-`    | `padding(left:10)`       |
+| `right`      | 右   | `double` | `-`    | `padding(right:10)`      |
+| `horizontal` | 水平 | `double` | `-`    | `padding(horizontal:10)` |
+| `vertical`   | 垂直 | `double` | `-`    | `padding(vertical:10)`   |
+
 ##### Native
 
 ```dart
